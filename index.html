@@ -1,0 +1,67 @@
+<!--Created by Jaakko Talvitie 11.2.2024 2:22 -->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tyyli.css">
+    <script type="text/javascript" src="toiminta.js"></script>
+    <title>Jännitteenjako kytkennän havainnollistaja</title>
+</head>
+
+<body>
+    <div id="view"> 
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+        <div id="line4"></div>
+        <div id="line5"></div>
+        <div id="line6"></div>
+        <div id="R1"></div>
+        <div id="R2"></div>
+        <div id="gnd_1"></div>
+        <div id="gnd_2"></div>
+    </div>
+
+    <div id="output">
+        <span id="out_txt" style="display:none;">Out 5V</span>
+        <input id="out_value" onchange="out_upd()" style="width:100%; height:100%;" value="Out 5V"></input>
+    </div>
+
+    <div id="input">
+        <span id="in_txt" style="display:none;">In 230V</span>
+        <input id="in_value" onchange="in_upd()" style="width:100%; height:100%;" value="In 230V"></input>
+    </div>
+
+    <div id="vr1">
+        <span id="r1_txt">R1 4500Ω</span> <!-- Oletus aloituksessa --->
+        <input id="r1_value" onchange="r1_upd()" style="display:none; width:100%; height:100%;" value="R1 4500Ω"></input>
+    </div>
+
+    <div id="vr2">
+        <span id="r2_txt" style="display:none;">R2 100Ω</span>
+        <input id="r2_value" onchange="r2_upd()" style="width:100%; height:100%;" value="R2 100Ω"></input>
+    </div>
+
+    <div id="typesel">
+        Jännitteenjako kytkennän havainnollistaja, Kirjoita ruutuihin pelkkä numero perusyksikössä.<br><br>
+
+        <input type="radio" onchange="calc_type(0)" id="sel_R1" name="calc_type" value="0" checked>
+        <label for="sel_R1">Selvitetään R1</label><br><br>
+
+        <input type="radio" onchange="calc_type(1)"  id="sel_R2" name="calc_type" value="1">
+        <label for="sel_R2">Selvitetään R2</label><br><br>
+
+        <input type="radio" onchange="calc_type(2)"  id="sel_Output" name="calc_type" value="2">
+        <label for="sel_Output">Selvitetään Ulostulo (V1)</label><br><br>
+
+        <input type="radio" onchange="calc_type(3)" id="sel_Input" name="calc_type" value="3">
+        <label for="sel_Input">Selvitetään Sisääntulo (VCC)</label>
+
+        <br><br><br>
+        Käytetyt kaavat:<br><br>
+        R1 = ((R2 * VCC) / V1) - R2 <br><br>
+        R2 = R1 / ((VCC / V1) -1) <br><br>
+        V1 = (R2 * VCC) / (R1 + R2)   <span style="color:red;"> HUOM! R1 + R2 != 0  ja R2 * VCC != 0</span> <br><br>
+        VCC = ((V1 * R1) + (V1 * R2))/R2       <span style="color:red;"> HUOM! R2 != 0 ja VCC != 0</span>
+        <br><br><br>
+        Made by: Jaakko Talvitie 11.2.2024 klo2:19 <a href="https://github.com/jaakka/Graphich_VoltageDividerCalculator">view in github</a>
+    </div>
+</body>

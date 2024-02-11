@@ -1,0 +1,163 @@
+/*Created by Jaakko Talvitie 11.2.2024 2:22*/
+
+#view
+{
+    position:absolute;
+    left:100px;
+    top:50px;
+    width:250px;
+    height:220px;
+}
+#line1
+{
+    width:32px;
+    height:2px;
+    border-bottom: solid black 2px;
+    position:absolute;
+    top:108px;
+    left:209px;
+    
+}
+
+#line2
+{
+    width:2px;
+    height:200px;
+    border-left: solid black 2px;
+    position:absolute;
+    top:10px;
+    left:209px;
+}
+
+#line3
+{
+    width:145px;
+    height:2px;
+    border-bottom: solid black 2px;
+    position:absolute;
+    top:8px;
+    left:65px;
+    
+}
+
+#line4
+{
+    width:145px;
+    height:2px;
+    border-bottom: solid black 2px;
+    position:absolute;
+    top:208px;
+    left:65px;
+    
+}
+
+#line5
+{
+    width:2px;
+    height:83px;
+    border-left: solid black 2px;
+    position:absolute;
+    top:10px;
+    left:64px;
+}
+
+#line6
+{
+    width:2px;
+    height:99px;
+    border-left: solid black 2px;
+    position:absolute;
+    top:113px;
+    left:64px;
+}
+
+
+#gnd_1
+{
+    width:32px;
+    height:2px;
+    border-bottom: solid black 2px;
+    position:absolute;
+    top:90px;
+    left:48px;
+}
+
+#gnd_2
+{
+    width:16px;
+    height:2px;
+    border-bottom: solid black 2px;
+    position:absolute;
+    top:110px;
+    left:56px;
+}
+
+#R1
+{
+    width:16px;
+    height:48px;
+    border:solid black 2px;
+    position:absolute;
+    top:40px;
+    left:200px;
+    background-color: white;
+}
+
+#R2
+{
+    width:16px;
+    height:48px;
+    border:solid black 2px;
+    position:absolute;
+    top:130px;
+    left:200px;
+    background-color: white;
+}
+#input
+{
+    width:90px;
+    height:20px;
+    /*border:solid black 1px;*/
+    position:absolute;
+    top:142px;
+    left:50px;
+    background-color: white;
+}
+#output
+{
+    width:70px;
+    height:20px;
+    /*border:solid black 1px;*/
+    position:absolute;
+    top:150px;
+    left:350px;
+    background-color: white;
+}
+
+#vr1
+{
+    width:70px;
+    height:20px;
+    /*border:solid black 1px;*/
+    position:absolute;
+    top:195px;
+    left:330px;
+    background-color: white;
+}
+#vr2
+{
+    width:70px;
+    height:20px;
+    /*border:solid black 1px;*/
+    position:absolute;
+    top:105px;
+    left:330px;
+    background-color: white;
+}
+
+#typesel
+{
+    position:absolute;
+    top:300px;
+    left:100px;
+}
